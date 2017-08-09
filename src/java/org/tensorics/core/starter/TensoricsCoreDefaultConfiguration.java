@@ -16,11 +16,14 @@ import org.tensorics.core.resolve.resolvers.Resolver;
 @Configuration
 public class TensoricsCoreDefaultConfiguration {
     
-    @Autowired
+    @Autowired(required=false)
     private List<Resolver<?, ?>> resolvers;
-    
+
     @Bean
     public ResolvingEngine resolvingEngine() {
+        if(resolvers == null) {
+            return ResolvingEngines.defaultEngine();
+        }
         return ResolvingEngines.defaultEngineWithAdditional(resolvers.stream().toArray(Resolver[]::new));
     }
 
