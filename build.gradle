@@ -90,8 +90,8 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 
 dependencies {
     compile 'org.tensorics:tensorics-core:0.+'
-    compile (group: 'org.springframework.boot', name: 'spring-boot-starter', version: '1.5.9.RELEASE') { exclude module: "spring-boot-starter-logging" }
-    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.9.RELEASE'
+    compile (group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.1.0.RELEASE') { exclude module: "spring-boot-starter-logging" }
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.0.RELEASE'
 }
 
 sourceSets {
